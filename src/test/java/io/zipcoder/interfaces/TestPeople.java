@@ -1,13 +1,24 @@
 package io.zipcoder.interfaces;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestPeople {
+    People people;
+    @Before
+    public void setUp() {
+        people = People.getAnonymous();
+    }
+
+    @After
+    public void tearDown() {
+        people.removeAll();
+    }
     @Test
     public void testAdd() {
         //Given
-        People people = new People();
         Person person1 = new Person(0);
         Person person2 = new Person(1);
         Person[] expected = new Person[]{person1, person2};
@@ -24,7 +35,6 @@ public class TestPeople {
     @Test
     public void testRemove() {
         //Given
-        People people = new People();
         Person person1 = new Person(0);
         Person person2 = new Person(1);
         Person person3 = new Person(333);
@@ -44,7 +54,6 @@ public class TestPeople {
     @Test
     public void testFindByID() {
         //Given
-        People people = new People();
         Person person1 = new Person(0);
         Person person2 = new Person(1);
         Person person3 = new Person(333);

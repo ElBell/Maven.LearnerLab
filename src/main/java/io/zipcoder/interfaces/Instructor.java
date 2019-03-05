@@ -18,4 +18,6 @@ public class Instructor extends Person implements Teacher {
         Arrays.stream(learners)
                 .forEach(learner -> learner.learn(numberOfHours/learners.length));
     }
+
+    
 }

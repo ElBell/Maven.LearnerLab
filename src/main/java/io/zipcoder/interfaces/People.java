@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class People<E extends Person> {
+public abstract class People<E extends Person> {
     private List<E> personList = new ArrayList<>();
 
     public void add(E person) {
@@ -53,5 +53,11 @@ public class People<E extends Person> {
         List<String> containedNames = new ArrayList<>();
         Arrays.stream(getArray()).forEach(person -> containedNames.add(person.getName()));
         return containedNames.containsAll(namesList);
+    }
+
+    private static People anonymous = new People() {};
+
+    public static People getAnonymous() {
+        return anonymous;
     }
 }
