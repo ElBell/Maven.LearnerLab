@@ -119,7 +119,7 @@
 
 -
 ### Part 7.0 - Test `Students` singleton
-* Create a `TestStudents` class.
+* Create a `io.zipcoder.interfaces.TestStudents` class.
 	* Create a `test` method which ensures that each of the students in your current cohort are in your `Students` singleton.
 
 
@@ -180,7 +180,7 @@
 
 -
 ### Part 10.0 - Test refactored classes.
-* Ensure that the `TestStudents`, `TestInstructors`, `TestPeople`, `TestZipCodeWilmington` classes were not affected by the refactor.
+* Ensure that the `io.zipcoder.interfaces.TestStudents`, `TestInstructors`, `TestPeople`, `TestZipCodeWilmington` classes were not affected by the refactor.
 
 
 
